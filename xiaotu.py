@@ -51,7 +51,7 @@ class CalcBotHandler(dingtalk_stream.ChatbotHandler):
         res_sql = self.sqlsearch.parser_main(res_classify)
         
         # return res_sql
-        final_answers = self.parser.search_main(res_sql)
+        final_answers = self.parser.search_main(res_sql, sent)
         if not final_answers:
             return answer
         else:
